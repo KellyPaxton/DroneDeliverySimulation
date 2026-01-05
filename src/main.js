@@ -1,12 +1,11 @@
-function waitForGoogle() {
-  if (window.google && window.google.maps) {
-    initMap();
-  } else {
-    requestAnimationFrame(waitForGoogle);
-  }
-}
+import { loadGoogleMaps } from './api-loader.js';
 
-waitForGoogle();
+try {
+  await loadGoogleMaps();
+  initMap();
+} catch (err) {
+  console.error('Google Maps failed to load', err);
+}
 
 function initMap() {
   const map = new google.maps.Map(document.getElementById("map"), {
