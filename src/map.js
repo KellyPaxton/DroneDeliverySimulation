@@ -11,7 +11,7 @@ export function initMap() {
     mapId: "53d9fee8bffb7a2a89109697",
   });
 
-  const position = { lat: 35.7700, lng: -91.6400, altitude: 30 };
+  const position = { lat: 35.7690, lng: -91.6400, altitude: 20 };
 
   const webGLOverlayView = createWebGLOverlay(position);
   webGLOverlayView.setMap(map);

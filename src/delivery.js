@@ -1,7 +1,7 @@
 export function delivery(position, map, overlay) {
     const startLat = position.lat;
-    const endLat = 35.7800;
-    const duration = 50000;
+    const endLat = 35.7750;
+    const duration = 25000;
     const startTime = performance.now();
 
     function animate(currentTime) {
@@ -16,4 +16,4 @@ export function delivery(position, map, overlay) {
     }
 
     requestAnimationFrame(animate);
-}
+}  
