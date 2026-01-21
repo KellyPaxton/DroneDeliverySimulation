@@ -16,9 +16,7 @@ export function createWebGLOverlay(position) {
     directionalLight.position.set(100, 100, 100);
     this.scene.add(directionalLight);
 
-    this.loader.load(
-      '/public/006.glb',
-      (gltf) => {
+    this.loader.load('/006.glb',(gltf) => {
       
         const box = new THREE.Box3().setFromObject(gltf.scene);
         const size = box.getSize(new THREE.Vector3());
