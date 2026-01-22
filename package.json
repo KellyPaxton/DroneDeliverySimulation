@@ -14,6 +14,7 @@
   "dependencies": {
     "3d-tiles-renderer": "^0.4.19",
     "three": "^0.182.0",
-    "three-stdlib": "^2.36.1"
+    "three-stdlib": "^2.36.1",
+    "vue": "^3.5.27"
   }
 }
