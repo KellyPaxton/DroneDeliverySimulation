@@ -1,6 +1,6 @@
 import { createWebGLOverlay } from './overlay.js';
-import { delivery } from './delivery.js';
-import { startCameraOrbit } from './orbit.js';  
+import { startCameraOrbit } from './orbit.js';
+import { accend } from './accend.js';  
 
 export function initMap() {
   const map = new google.maps.Map(document.getElementById("map"), {
@@ -11,14 +11,14 @@ export function initMap() {
     mapId: "53d9fee8bffb7a2a89109697",
   });
 
-  const position = { lat: 35.7690, lng: -91.6400, altitude: 20 };
+  const position = { lat: 35.7690, lng: -91.6405, altitude: 5 };
 
   const webGLOverlayView = createWebGLOverlay(position);
   webGLOverlayView.setMap(map);
 
-  // Start drone movement
-  delivery(position, map, webGLOverlayView);
+  setTimeout(() => {
+    accend(position, map, webGLOverlayView);
+  }, 2000);
 
-  // Start camera orbit
   startCameraOrbit(map, position);
 }
